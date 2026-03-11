@@ -1,45 +1,39 @@
-📊 Análise de Dados: Salários em Data Science
-Este projeto foi desenvolvido durante uma aula prática de Python para análise de dados. O objetivo principal foi realizar o Processamento de Dados (ETL) e a Análise Exploratória de um dataset contendo informações salariais do setor de tecnologia ao redor do mundo.
+# 📊 Análise de Dados: Salários em Data Science
 
-🛠️ Tecnologias Utilizadas
-Python: Linguagem principal.
+Este projeto foi desenvolvido para explorar, limpar e visualizar dados sobre o mercado de trabalho em Ciência de Dados. O foco principal foi transformar dados brutos em insights compreensíveis, utilizando técnicas de tratamento de dados e visualizações estatísticas.
 
-Pandas: Manipulação e tratamento de dados.
+## 🛠️ Tecnologias e Bibliotecas
+* **Python**: Linguagem base.
+* **Pandas**: Manipulação de DataFrames e limpeza de dados.
+* **NumPy**: Tratamento de valores nulos (`NaN`).
+* **Matplotlib & Seaborn**: Gráficos estáticos e análise de distribuição.
+* **Plotly Express**: Gráficos interativos e dinâmicos.
 
-NumPy: Operações matemáticas e tratamento de valores nulos.
+---
 
-Matplotlib & Seaborn: Criação de gráficos estáticos e boxplots.
+## 📖 O que foi feito no projeto?
 
-Plotly Express: Visualizações interativas (Gráficos de barra e pizza).
+### 1. Limpeza e Tradução (ETL)
+Os dados originais estavam em inglês e continham siglas técnicas. O projeto realizou:
+* **Renomeação de colunas**: De `work_year` para `ano`, `salary_in_usd` para `usd`, etc.
+* **Mapeamento de categorias**: Tradução de níveis de experiência (Ex: `SE` → `Senior`) e tipos de contrato (Ex: `FT` → `Tempo Integral`).
+* **Tratamento de Nulos**: Demonstração de técnicas como preenchimento por média, mediana, `ffill`, `bfill` e remoção de dados ausentes.
 
-📖 Etapas do Projeto
-1. Limpeza e Tradução de Dados
-O dataset original possuía nomes de colunas e categorias em inglês. Foram realizadas as seguintes transformações:
+### 2. Análise Exploratória (EDA)
+Foram geradas visualizações para responder perguntas de negócio:
+* **Distribuição Salarial**: Qual a frequência de faixas salariais em dólar?
+* **Senioridade vs. Salário**: Qual a média salarial para cada nível de experiência?
+* **Modalidade de Trabalho**: Qual a proporção de vagas remotas, híbridas e presenciais?
 
-Renomeação de Colunas: Tradução de termos como work_year para ano, experience_level para senioridade, etc.
 
-Mapeamento de Categorias: Conversão de siglas (Ex: 'SE' ➔ 'Senior', 'FT' ➔ 'Tempo Integral', 'M' ➔ 'Médio').
 
-Tipagem: Conversão de tipos de dados para garantir cálculos precisos.
+### 3. Visualizações Estatísticas
+O código utiliza **Boxplots** para identificar a dispersão dos salários e a presença de *outliers* (valores muito acima ou abaixo da média) em cada categoria de senioridade, além de **Histogramas** para entender a densidade dos dados.
 
-2. Tratamento de Valores Ausentes (NaN)
-Foram exploradas diferentes técnicas para lidar com dados faltantes, tais como:
+---
 
-Preenchimento com a Média e Mediana.
-
-Métodos de propagação (ffill e bfill).
-
-Substituição por valores genéricos ("Não informado").
-
-Remoção de linhas nulas para a análise final.
-
-3. Análise Exploratória (EDA)
-Geramos diversos insights visuais para entender o mercado:
-
-Distribuição Salarial: Histograma para verificar a frequência de salários em USD.
-
-Salário por Senioridade: Gráficos de barras ordenados pela média salarial.
-
-Outliers: Uso de Boxplots para identificar a dispersão dos salários e valores discrepantes entre os níveis de experiência.
-
+## 📈 Resultados e Insights
+* O projeto identifica as tendências salariais globais.
+* Demonstra como o nível de senioridade impacta diretamente na remuneração em USD.
+* Proporciona um dataset limpo (`dados-imersao-final.csv`) pronto para análises futuras ou dashboards.
 Modalidade de Trabalho: Gráfico de rosca (donut chart) mostrando a proporção entre trabalho Presencial, Híbrido e Remoto.
